@@ -1,5 +1,5 @@
 # limelight_utility
-A simple utility to make cleaner calls to the Limelight.
+A simple utility to make cleaner calls to the Limelight.<br/>
 ![limelight.getTV()](ex.gif)
 
 # How to use:
