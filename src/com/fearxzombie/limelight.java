@@ -127,6 +127,14 @@ public class limelight {
     return limelightNT.getEntry(entry).getDouble(0);
   }
   /**
+   * setSnapshot - Allows users to take snapshots during a match
+   * @param 0 for no, 1 for 2 snapshots per second.
+   * @return void
+   */
+  public double setSnapshot(double value){
+    return limelightNT.getEntry("snapshot").setNumber(value);
+  }
+  /**
    * set() - Set any value outside what is currently provided with the Limelight
    * @return value of key
    * @param key to set, and value to set.
