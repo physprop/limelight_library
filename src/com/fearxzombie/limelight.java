@@ -120,10 +120,18 @@ public class limelight {
 
   /**
    * get() - monitor any value needed outside of currently provided.
-   * 
+   * @param key to pull
    * @return value of key
    */
   public double get(String entry) {
     return limelightNT.getEntry(entry).getDouble(0);
+  }
+  /**
+   * set() - Set any value outside what is currently provided with the Limelight
+   * @return value of key
+   * @param key to set, and value to set.
+   */
+  public double set(String entry, double value){
+    return limelightNT.getEntry(entry).setNumber(value);
   }
 }
