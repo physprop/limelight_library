@@ -40,7 +40,7 @@ public class limelight {
   }
 /**
  * setPipeline() Sets current pipeline on Limelight.
- * @param value
+ * @param Pipeline number
  */
   public void setPipeline(double value) {
     limelightNT.getEntry("pipeline").setNumber(value);
