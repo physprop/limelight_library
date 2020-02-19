@@ -9,7 +9,7 @@ public class limelight {
   private NetworkTable limelightNT;
 
   public limelight() {
-    limelightName = "limelight-one";
+    limelightName = "limelight";
     limelightNT = getNT.getTable(limelightName);
   }
 
