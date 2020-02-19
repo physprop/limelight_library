@@ -1,3 +1,10 @@
+/**
+ * This software was developed by Gabriel McMillan, and depends on software from WPILib and NTCore, so keep that in mind when using.
+ * The GPL 3.0 license applies to this program, you are free to distribute, use, and modify this software however you wish, but keep this notice,
+ * and the license file with it when distributing it. Also, feel free to make any pull requests to enhance this library!
+ * Good luck, and have a great season! ~Gabriel McMillan
+ */
+
 package com.fearxzombie;
 
 import edu.wpi.first.networktables.NetworkTable;
