@@ -38,7 +38,13 @@ public class limelight {
   public void setCAMMode(double value) {
     limelightNT.getEntry("camMode").setNumber(value);
   }
-
+/**
+ * setPipeline() Sets current pipeline on Limelight.
+ * @param value
+ */
+  public void setPipeline(double value) {
+    limelightNT.getEntry("pipeline").setNumber(value);
+  }
   /**
    * setStreamMode() - Sets limelight’s streaming mode -0 Standard - Side-by-side streams if a
    * webcam is attached to Limelight - 1 PiP Main - The secondary camera stream is placed in the
