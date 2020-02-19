@@ -129,17 +129,17 @@ public class limelight {
   /**
    * setSnapshot - Allows users to take snapshots during a match
    * @param 0 for no, 1 for 2 snapshots per second.
-   * @return void
+   * @return False if the table key already exists with a different type
    */
-  public double setSnapshot(double value){
-    return limelightNT.getEntry("snapshot").setNumber(value);
+  public boolean setSnapshot(double value) {
+    return limelightNT.getEntry("snapshot").setValue(value);
   }
   /**
    * set() - Set any value outside what is currently provided with the Limelight
-   * @return value of key
+   * @return False if the table key already exists with a different type
    * @param key to set, and value to set.
    */
-  public double set(String entry, double value){
+  public boolean set(String entry, Double value) {
     return limelightNT.getEntry(entry).setNumber(value);
   }
 }
