@@ -1,4 +1,4 @@
-package com.fearxzombie.util;
+package com.fearxzombie;
 
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
