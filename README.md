@@ -1,4 +1,4 @@
-# limelight_utility
+# limelight_library
 A simple library to help make cleaner calls to the Limelight.<br/>
 ![I know this is in robotcontainer and I am not supposed to do that, but I needed a quick place to put it anyways.](ex.gif)
 
