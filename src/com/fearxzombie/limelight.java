@@ -142,4 +142,15 @@ public class limelight {
   public boolean set(String entry, Double value) {
     return limelightNT.getEntry(entry).setNumber(value);
   }
+  /**
+   * getDist() - calculates approximate distance from a fixed angled limelight to the target.
+   * @param h1 = target height, h2 = height of limelight from the ground, a1 = angle of limelight on the robot. 
+   * @return approx distance in meters
+   */
+  public double getDist(double h1, double h2, double a1){
+    double a2 = getTY();
+    double currentDist = ((Math.abs(h2 - h1) / Math.tan((a1 + a2) * Math.PI / 180)) / 1.1154856);
+    return currentDist;
+  }
+
 }
