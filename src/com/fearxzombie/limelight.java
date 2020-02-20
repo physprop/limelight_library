@@ -25,10 +25,9 @@ public class limelight {
     limelightNT = getNT.getTable(limelightName);
   }
 
-
   /**
-   * setLEDMode() - Sets LED mode. 0 use the LED Mode set in the current pipeline, 1 force off, 2
-   * force blink, 3 force on
+   * setLEDMode() - Sets LED mode. 0 use the LED Mode set in the current pipeline,
+   * 1 force off, 2 force blink, 3 force on
    * 
    * @return void
    */
@@ -37,26 +36,30 @@ public class limelight {
   }
 
   /**
-   * setCAMMode() - Sets camera mode. 0 for Vision processor, 1 for Driver Camera (Increases
-   * exposure, disables vision processing)
+   * setCAMMode() - Sets camera mode. 0 for Vision processor, 1 for Driver Camera
+   * (Increases exposure, disables vision processing)
    * 
    * @return void
    */
   public void setCAMMode(double value) {
     limelightNT.getEntry("camMode").setNumber(value);
   }
-/**
- * setPipeline() Sets current pipeline on Limelight.
- * @param Pipeline number
- */
+
+  /**
+   * setPipeline() Sets current pipeline on Limelight.
+   * 
+   * @param Pipeline number
+   */
   public void setPipeline(double value) {
     limelightNT.getEntry("pipeline").setNumber(value);
   }
+
   /**
-   * setStreamMode() - Sets limelight’s streaming mode -0 Standard - Side-by-side streams if a
-   * webcam is attached to Limelight - 1 PiP Main - The secondary camera stream is placed in the
-   * lower-right corner of the primary camera stream - 2 PiP Secondary - The primary camera stream
-   * is placed in the lower-right corner of the secondary camera stream
+   * setStreamMode() - Sets limelight’s streaming mode -0 Standard - Side-by-side
+   * streams if a webcam is attached to Limelight - 1 PiP Main - The secondary
+   * camera stream is placed in the lower-right corner of the primary camera
+   * stream - 2 PiP Secondary - The primary camera stream is placed in the
+   * lower-right corner of the secondary camera stream
    * 
    * @return void
    */
@@ -120,37 +123,45 @@ public class limelight {
 
   /**
    * get() - monitor any value needed outside of currently provided.
+   * 
    * @param key to pull
    * @return value of key
    */
   public double get(String entry) {
     return limelightNT.getEntry(entry).getDouble(0);
   }
+
   /**
    * setSnapshot - Allows users to take snapshots during a match
+   * 
    * @param 0 for no, 1 for 2 snapshots per second.
    * @return False if the table key already exists with a different type
    */
   public boolean setSnapshot(double value) {
     return limelightNT.getEntry("snapshot").setValue(value);
   }
+
   /**
    * set() - Set any value outside what is currently provided with the Limelight
+   * 
    * @return False if the table key already exists with a different type
    * @param key to set, and value to set.
    */
   public boolean set(String entry, Double value) {
     return limelightNT.getEntry(entry).setNumber(value);
   }
+
   /**
-   * getDist() - calculates approximate distance from a fixed angled limelight to the target.
-   * @param h1 = target height, h2 = height of limelight from the ground, a1 = angle of limelight on the robot. 
+   * getDist() - calculates approximate distance from a fixed angled limelight to
+   * the target.
+   * 
+   * @param h1 = target height, h2 = height of limelight from the ground, a1 =
+   *           angle of limelight on the robot.
    * @return approx distance in meters
    */
-  public double getDist(double h1, double h2, double a1){
+  public double getDist(double h1, double h2, double a1) {
     double a2 = getTY();
     double currentDist = ((Math.abs(h2 - h1) / Math.tan((a1 + a2) * Math.PI / 180)) / 1.1154856);
     return currentDist;
   }
-
 }
