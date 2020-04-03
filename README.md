@@ -3,9 +3,22 @@ A simple library to help make cleaner calls to the Limelight.<br/>
 ![I know this is in robotcontainer and I am not supposed to do that, but I needed a quick place to put it anyways.](ex.gif)
 
 # How to use:
-1. Clone repository into robot project you want.
-2. In robot code: make a reference to limelight(); 
-3. Use limelight.get**(); or limelight.set**(); to get or set NT values.
+1. In your build.gradle file paste the following:
+This part goes before the deploy call.
+<pre>
+repositories {
+   maven {
+    url 'https://pkgs.dev.azure.com/gabrielmcmillan/limelight_library/_packaging/limelight_library_maven/maven/v1'
+}
+}
+</pre>
+This part goes under dependancies.
+<pre>
+compile(group: 'com.fearxzombie', name: 'limelight_library', version: 'unspecified')
+</pre>
+2. Build your robot code to pull the dependancies.
+3. In robot code: make a reference to limelight(); 
+4. Use limelight.get**(); or limelight.set**(); to get or set NT values.
 
 By default, the name is "limelight", however it can be changed by appending a string to the contructor.
 
