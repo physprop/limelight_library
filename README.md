@@ -37,6 +37,12 @@ By default, the hostname used is "limelight", however it can be changed by appen
 public static final limelight m_limelight = new limelight("limelight-one");
 </pre>
 
+
+Also included is a document where most limelight networktables settings can be called in a more human readable way. Just call it like this:
+<pre>
+m_limelight.setLEDMode(ll_mode.led.on);
+</pre>
+
 # Legacy installation:
 In the event that the maven dependancy does not work, simply downloading the zip file from the Azure DevOps page above and placing the src/main/java/com/fearxzombie
 folder into the robot code directory will work the same way. However a pro with maven is that if any updates are pushed, a build of code is all you need to be able
