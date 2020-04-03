@@ -37,7 +37,7 @@ By default, the hostname used is "limelight", however it can be changed by appen
 public static final limelight m_limelight = new limelight("limelight-one");
 </pre>
 
-#Legacy installation
+# Legacy installation:
 In the event that the maven dependancy does not work, simply downloading the zip file from the Azure DevOps page above and placing the src/main/java/com/fearxzombie
 folder into the robot code directory will work the same way. However a pro with maven is that if any updates are pushed, a build of code is all you need to be able
 to implement new features.
